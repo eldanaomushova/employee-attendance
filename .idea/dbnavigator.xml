@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="true" />
+    <value-preview-text-wrapping value="false" />
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="45bc45c6-e1e3-4f3d-81c3-309db0314a92">
+      <console name="postgres" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -21,6 +21,9 @@
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="45bc45c6-e1e3-4f3d-81c3-309db0314a92" dataset="public.userinfo" active-filter-id="" />
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -39,25 +42,25 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" active="true" signed="true">
+      <connection id="45bc45c6-e1e3-4f3d-81c3-309db0314a92" active="true" signed="true">
         <database>
-          <name value="Connection" />
+          <name value="postgres" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="14.1" />
+          <database-version value="16.0" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5432" />
-          <database value="postgres" />
+          <database value="music-recommedation" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="NjU0MzIx" />
+          <deprecated-pwd value="MTIzNDU2" />
         </database>
         <properties>
           <auto-commit value="false" />
@@ -258,9 +261,11 @@
           <content-type name="DTD" enabled="true" />
           <content-type name="HTML" enabled="true" />
           <content-type name="XHTML" enabled="true" />
+          <content-type name="CSS" enabled="true" />
           <content-type name="Java" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
+          <content-type name="JavaScript" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />

@@ -4,13 +4,13 @@ import java.sql.*;
 
 public class MusicDAO {
     private Connection conn;
-    private String url = "jdbc:postgresql://localhost:5432/postgres";
+    private String url = "jdbc:postgresql://localhost:5432/music-recommedation";
     private String username = "postgres";
-    private String pass = "654321";
+    private String pass = "123456";
 
     public MusicDAO() {
         try {
-            this.conn = DriverManager.getConnection(url);
+            this.conn = DriverManager.getConnection(url, username, pass);
             System.out.println("Database successfully connected");
         } catch (SQLException e) {
             throw new RuntimeException("Error connecting to the database", e);
@@ -28,11 +28,9 @@ public class MusicDAO {
     }
 
     public boolean isEmailInDatabase(String email) {
-        String sql = "SELECT COUNT(*) FROM users WHERE email = ?";
-
+        String sql = "SELECT COUNT(*) FROM userinfo WHERE login = ?";
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, email);
-
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     int count = resultSet.getInt(1);
@@ -48,7 +46,7 @@ public class MusicDAO {
 
     public boolean isPasswordInDatabase(String password) {
         // Note: Storing passwords in plain text is not secure; use proper password hashing.
-        String sql = "SELECT COUNT(*) FROM users WHERE password = ?";
+        String sql = "SELECT COUNT(*) FROM userinfo WHERE password = ?";
 
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, password);
