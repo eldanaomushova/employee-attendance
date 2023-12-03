@@ -13,12 +13,7 @@
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
     <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[SELECT * FROM "public".usermusic WHERE password = 'c';
-insert into "public".usermusic values(
-    'a', 'b', 'c'
-);
-
-select * from "public".usermusic;]]></console>
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * from usermusic;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -28,13 +23,6 @@ select * from "public".usermusic;]]></console>
     <open-files>
       <object connection-id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" object-ref="consoles/Connection" />
     </open-files>
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" dataset="public.usermusic" active-filter-id="EMPTY_FILTER">
-      <filter id="976e9a97-3e2b-45a2-92df-0c021438136d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="user_id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -234,7 +222,7 @@ select * from "public".usermusic;]]></console>
         <enable-column-tooltip value="true" />
       </general>
       <sorting>
-        <nulls-first value="false" />
+        <nulls-first value="true" />
         <max-sorting-columns value="4" />
       </sorting>
       <audit-columns>
