@@ -17,7 +17,7 @@ public class HelloApplication extends Application {
             Parent root = fxmlLoader. load();
             ScrollPane scrollPane = new ScrollPane();
             scrollPane.setContent(root);
-            Scene scene = new Scene(scrollPane, 800, 500);
+            Scene scene = new Scene(scrollPane, 1300, 800);
             stage.setTitle("Music Recommendations!");
             stage.setScene(scene);
             stage.show();

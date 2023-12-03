@@ -1,51 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="DBNavigator.Project.DataEditorManager">
-    <record-view-column-sorting-type value="BY_INDEX" />
-    <value-preview-text-wrapping value="false" />
-    <value-preview-pinned value="false" />
-  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
-    <autoscroll-to-editor value="true" />
+    <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
     <show-object-properties value="true" />
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8">
-<<<<<<< HEAD
+    <connection id="4e607659-4072-49bb-bb7a-6e850b19271c">
       <console name="Connection" type="STANDARD" schema="" session="Main" />
-=======
-      <console name="Connection" type="STANDARD" schema="public" session="Main">select * from usermusic;</console>
->>>>>>> cb0ffa9c52def30060a5b739ecda35fbd0840296
     </connection>
-  </component>
-  <component name="DBNavigator.Project.DatabaseEditorStateManager">
-    <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
     <open-files />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="45bc45c6-e1e3-4f3d-81c3-309db0314a92" dataset="public.userinfo" active-filter-id="" />
-  </component>
-  <component name="DBNavigator.Project.DatasetFilterManager">
-    <filter-actions connection-id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" dataset="public.usermusic" active-filter-id="EMPTY_FILTER">
-      <filter id="976e9a97-3e2b-45a2-92df-0c021438136d" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
-        <condition column="user_id" operator="=" value="" active="true" />
-      </filter>
-    </filter-actions>
-  </component>
-  <component name="DBNavigator.Project.ExecutionManager">
-    <retain-sticky-names value="false" />
-  </component>
-  <component name="DBNavigator.Project.MethodExecutionManager">
-    <method-browser />
-    <execution-history>
-      <group-entries value="true" />
-      <execution-inputs />
-    </execution-history>
-    <argument-values-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -53,7 +20,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" active="true" signed="true">
+      <connection id="4e607659-4072-49bb-bb7a-6e850b19271c" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -272,11 +239,9 @@
           <content-type name="DTD" enabled="true" />
           <content-type name="HTML" enabled="true" />
           <content-type name="XHTML" enabled="true" />
-          <content-type name="CSS" enabled="true" />
           <content-type name="Java" enabled="true" />
           <content-type name="SQL" enabled="true" />
           <content-type name="PL/SQL" enabled="true" />
-          <content-type name="JavaScript" enabled="true" />
           <content-type name="JSON" enabled="true" />
           <content-type name="JSON5" enabled="true" />
           <content-type name="Groovy" enabled="true" />
@@ -546,9 +511,5 @@
         </visibility-settings>
       </environment>
     </general-settings>
-  </component>
-  <component name="DBNavigator.Project.StatementExecutionManager">
-    <execution-variables />
-    <execution-variable-types />
   </component>
 </project>
