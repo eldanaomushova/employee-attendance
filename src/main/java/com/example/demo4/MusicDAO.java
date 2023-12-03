@@ -1,36 +1,41 @@
 package com.example.demo4;
-
-import java.sql.*;
+import java.sql.DriverManager;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 public class MusicDAO {
     private Connection conn;
-    String url = "jdbc:postgresql://localhost:5432/postgres";
+    String url = "jdbc:postgresql://localhost:5432/database";
     private String username = "postgres";
-    private String pass = "654321";
+    private String pass = "21442139";
 
 
     public MusicDAO() {
         try {
             Class.forName("org.postgresql.Driver");
-            String url = "jdbc:postgresql://localhost:5432/postgres";
-            conn = DriverManager.getConnection(url, username, pass);
+//            String url = "jdbc:postgresql://localhost:5432/database";
+            this.conn = DriverManager.getConnection(url, username, pass);
+
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Error loading PostgreSQL JDBC Driver", e);
+            e.printStackTrace(); // Or handle the exception appropriately
+
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
-    public void closeConnection() {
-        try {
-            if (conn != null && !conn.isClosed()) {
-                conn.close();
-            }
-        } catch (SQLException e) {
-            throw new RuntimeException("Error closing the database connection", e);
-        }
-    }
+//    public void closeConnection() {
+//        try {
+//            if (conn != null && !conn.isClosed()) {
+//                conn.close();
+//            }
+//        } catch (SQLException e) {
+//            throw new RuntimeException("Error closing the database connection", e);
+//        }
+//    }
     public boolean isPasswordInDatabase(LogInPage logInPage) {
-        String sql = "SELECT * FROM usermusic WHERE password = ?";
+        String sql = "SELECT * FROM user_info WHERE password = ?";
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
             statement.setString(1, logInPage.setPassword());
             try (ResultSet resultSet = statement.executeQuery()) {

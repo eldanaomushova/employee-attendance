@@ -12,17 +12,27 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8">
-      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * from usermusic;]]></console>
+    <connection id="a5e9dade-2256-441f-a56f-4d66c99d9810">
+      <console name="Connection" type="STANDARD" schema="" session="Main"><![CDATA[select * from user_info;]]></console>
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
     <last-used-providers />
   </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files>
-      <object connection-id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" object-ref="consoles/Connection" />
-    </open-files>
+    <open-files />
+  </component>
+  <component name="DBNavigator.Project.DatasetFilterManager">
+    <filter-actions connection-id="a5e9dade-2256-441f-a56f-4d66c99d9810" dataset="public.user_info" active-filter-id="">
+      <filter id="fbf40c44-abb1-4bef-b20f-1e01e1d90798" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="user_id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
+    <filter-actions connection-id="a5e9dade-2256-441f-a56f-4d66c99d9810" dataset="public.music" active-filter-id="">
+      <filter id="9bcb25be-b10c-4600-94f3-4deab0979df2" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
+        <condition column="id" operator="=" value="" active="true" />
+      </filter>
+    </filter-actions>
   </component>
   <component name="DBNavigator.Project.ExecutionManager">
     <retain-sticky-names value="false" />
@@ -41,31 +51,28 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" active="true" signed="true">
+      <connection id="a5e9dade-2256-441f-a56f-4d66c99d9810" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="14.1" />
+          <database-version value="15.4" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5432" />
-          <database value="postgres" />
+          <database value="database" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="NjU0MzIx" />
+          <deprecated-pwd value="MjE0NDIxMzk=" />
         </database>
         <properties>
           <auto-commit value="false" />
-          <properties>
-            <property key="serverTimezone" value="UTC" />
-          </properties>
         </properties>
         <ssh-settings>
           <active value="false" />
