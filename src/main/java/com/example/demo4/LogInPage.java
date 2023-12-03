@@ -16,7 +16,8 @@ public class LogInPage {
         return password;
     }
 
-    public void setPassword(String password) {
+    public String setPassword(String password) {
         this.password = password;
+        return null;
     }
 }

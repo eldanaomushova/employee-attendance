@@ -14,7 +14,7 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
         try {
             FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-            Parent root = fxmlLoader.load();
+            Parent root = fxmlLoader. load();
             ScrollPane scrollPane = new ScrollPane();
             scrollPane.setContent(root);
             Scene scene = new Scene(scrollPane, 800, 500);

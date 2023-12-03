@@ -12,8 +12,8 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="45bc45c6-e1e3-4f3d-81c3-309db0314a92">
-      <console name="postgres" type="STANDARD" schema="" session="Main" />
+    <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8">
+      <console name="Connection" type="STANDARD" schema="" session="Main" />
     </connection>
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
@@ -42,25 +42,25 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="45bc45c6-e1e3-4f3d-81c3-309db0314a92" active="true" signed="true">
+      <connection id="1e052b59-1e35-4bf4-ac84-2bfa6b55b7f8" active="true" signed="true">
         <database>
-          <name value="postgres" />
+          <name value="Connection" />
           <description value="" />
           <database-type value="POSTGRES" />
           <config-type value="BASIC" />
-          <database-version value="16.0" />
+          <database-version value="14.1" />
           <driver-source value="BUNDLED" />
           <driver-library value="" />
           <driver value="" />
           <url-type value="DATABASE" />
           <host value="localhost" />
           <port value="5432" />
-          <database value="music-recommedation" />
+          <database value="postgres" />
           <tns-folder value="" />
           <tns-profile value="" />
           <type value="USER_PASSWORD" />
           <user value="postgres" />
-          <deprecated-pwd value="MTIzNDU2" />
+          <deprecated-pwd value="NjU0MzIx" />
         </database>
         <properties>
           <auto-commit value="false" />
