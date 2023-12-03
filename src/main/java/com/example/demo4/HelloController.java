@@ -71,27 +71,35 @@ public class HelloController {
         alert.setContentText(error);
         alert.showAndWait();
     }
-
-    public void switchToScene1(ActionEvent event) throws IOException {
-        Object root = FXMLLoader.load(getClass().getResource("hello-view.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene((Parent) root);
-        stage.setScene(scene);
-        stage.show();
-    }
-    public void switchToScene2(ActionEvent event) throws IOException {
+    public void loginbutton(ActionEvent event) throws IOException {
         LogInPage logInPage = new LogInPage();
         logInPage.setEmail(inputEmail.getText());
         logInPage.setPassword(inputPassword.getText());
         try {
-            if (musicDAO.isPasswordInDatabase(logInPage.getPassword())) {
+            if (musicDAO.isPasswordInDatabase(logInPage.getEmail(), logInPage.getPassword())) {
                 Parent root = FXMLLoader.load(getClass().getResource("Main.fxml"));
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 scene = new Scene(root);
                 stage.setScene(scene);
                 stage.show();
             } else {
-                alert("You don't have an account.\nPlease sign in!");
+                alert("You don't have an account.\nOr error in entering email and password");
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    public void signInButton(ActionEvent event) throws IOException {
+        LogInPage logInPage = new LogInPage();
+        logInPage.setEmail(inputEmail.getText());
+        logInPage.setPassword(inputPassword.getText());
+        try {
+            if (!musicDAO.isPasswordInDatabase(logInPage.getEmail(), logInPage.getPassword())) {
+                musicDAO.addtodatabase(logInPage.getEmail(), logInPage.getPassword());
+                alert("You created an account! Success!");
+
+            } else {
+                alert("You don't have an account.\nOr error in entering email and password");
             }
         } catch (Exception e) {
             e.printStackTrace();

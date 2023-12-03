@@ -43,12 +43,11 @@ public class MusicDAO {
             throw new RuntimeException("Error closing the database connection", e);
         }
     }
-    public boolean isPasswordInDatabase(String password) throws SQLException {
-        String sql = "SELECT COUNT(*) AS count FROM \"public\".usermusic WHERE password = ?";
-
+    public boolean isPasswordInDatabase(String email, String password) throws SQLException {
+        String sql = "SELECT COUNT(*) AS count FROM \"public\".user WHERE email = ? AND password = ?";
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, password);
-
+            statement.setString(1, email);
+            statement.setString(2, password);
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
                     int count = resultSet.getInt("count");
@@ -65,6 +64,28 @@ public class MusicDAO {
         }
 
         return false;
+    }
+    public boolean addtodatabase(String email, String password) throws SQLException {
+        String sql = "INSERT INTO \"public\".user (email, password) VALUES (?, ?)";
+        try (PreparedStatement statement = conn.prepareStatement(sql)) {
+            statement.setString(1, email);
+            statement.setString(2, password);
+            int affectedRows = statement.executeUpdate();
+            // Check if the insertion was successful
+            if (affectedRows > 0) {
+                System.out.println("Record inserted successfully.");
+
+                // Commit the changes
+                conn.commit();
+                return true;
+            }
+        } catch (SQLException e) {
+            System.err.println("Error executing query: " + e.getMessage());
+            throw new RuntimeException("Error inserting data into the database", e);
+        }
+        return false;
+
+
     }
 
 

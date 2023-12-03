@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="DBNavigator.Project.DataEditorManager">
+    <record-view-column-sorting-type value="BY_INDEX" />
+    <value-preview-text-wrapping value="false" />
+    <value-preview-pinned value="false" />
+  </component>
   <component name="DBNavigator.Project.DatabaseBrowserManager">
     <autoscroll-to-editor value="false" />
     <autoscroll-from-editor value="true" />
@@ -7,12 +12,29 @@
     <loaded-nodes />
   </component>
   <component name="DBNavigator.Project.DatabaseConsoleManager">
-    <connection id="4e607659-4072-49bb-bb7a-6e850b19271c">
-      <console name="Connection" type="STANDARD" schema="" session="Main" />
+    <connection id="0a99c835-e13c-473e-9b93-9ab83a0faeff">
+      <console name="Connection" type="STANDARD" schema="public" session="Main"><![CDATA[select * from "user";]]></console>
     </connection>
   </component>
+  <component name="DBNavigator.Project.DatabaseEditorStateManager">
+    <last-used-providers />
+  </component>
   <component name="DBNavigator.Project.DatabaseFileManager">
-    <open-files />
+    <open-files>
+      <object connection-id="0a99c835-e13c-473e-9b93-9ab83a0faeff" object-ref="consoles/Connection" />
+      <object connection-id="0a99c835-e13c-473e-9b93-9ab83a0faeff" object-ref="schemas/public/tables/user" />
+    </open-files>
+  </component>
+  <component name="DBNavigator.Project.ExecutionManager">
+    <retain-sticky-names value="false" />
+  </component>
+  <component name="DBNavigator.Project.MethodExecutionManager">
+    <method-browser />
+    <execution-history>
+      <group-entries value="true" />
+      <execution-inputs />
+    </execution-history>
+    <argument-values-cache />
   </component>
   <component name="DBNavigator.Project.ObjectQuickFilterManager">
     <last-used-operator value="EQUAL" />
@@ -20,7 +42,7 @@
   </component>
   <component name="DBNavigator.Project.Settings">
     <connections>
-      <connection id="4e607659-4072-49bb-bb7a-6e850b19271c" active="true" signed="true">
+      <connection id="0a99c835-e13c-473e-9b93-9ab83a0faeff" active="true" signed="true">
         <database>
           <name value="Connection" />
           <description value="" />
@@ -511,5 +533,9 @@
         </visibility-settings>
       </environment>
     </general-settings>
+  </component>
+  <component name="DBNavigator.Project.StatementExecutionManager">
+    <execution-variables />
+    <execution-variable-types />
   </component>
 </project>
