@@ -2,11 +2,14 @@ package com.example.demo4;
 
 import java.sql.*;
 
+
+
 public class MusicDAO {
     private Connection conn;
-    String url = "jdbc:postgresql://localhost:5432/postgres";
+    private String url = "jdbc:postgresql://localhost:5432/postgres";
     private String username = "postgres";
     private String pass = "654321";
+    LogInPage logInPage = new LogInPage();
 
 
     public MusicDAO() {
@@ -14,12 +17,23 @@ public class MusicDAO {
             Class.forName("org.postgresql.Driver");
             String url = "jdbc:postgresql://localhost:5432/postgres";
             conn = DriverManager.getConnection(url, username, pass);
+            conn.setAutoCommit(true);
+
+            // Test the connection
+            if (conn.isValid(1)) {
+                System.out.println("Connected to the database!");
+            } else {
+                System.out.println("Failed to connect to the database!");
+            }
+        }  catch (SQLException e) {
+            e.printStackTrace();  // Print the full stack trace
+            System.err.println("Error executing query: " + e.getMessage());
+            throw new RuntimeException("Error checking password in the database", e);
         } catch (ClassNotFoundException e) {
-            throw new RuntimeException("Error loading PostgreSQL JDBC Driver", e);
-        } catch (SQLException e) {
             throw new RuntimeException(e);
         }
     }
+
     public void closeConnection() {
         try {
             if (conn != null && !conn.isClosed()) {
@@ -29,13 +43,15 @@ public class MusicDAO {
             throw new RuntimeException("Error closing the database connection", e);
         }
     }
-    public boolean isPasswordInDatabase(LogInPage logInPage) {
-        String sql = "SELECT * FROM usermusic WHERE password = ?";
+    public boolean isPasswordInDatabase(String password) throws SQLException {
+        String sql = "SELECT COUNT(*) AS count FROM \"public\".usermusic WHERE password = ?";
+
         try (PreparedStatement statement = conn.prepareStatement(sql)) {
-            statement.setString(1, logInPage.setPassword());
+            statement.setString(1, password);
+
             try (ResultSet resultSet = statement.executeQuery()) {
                 if (resultSet.next()) {
-                    int count = resultSet.getInt(1);
+                    int count = resultSet.getInt("count");
                     System.out.println("Count from the database: " + count);
                     return count > 0;
                 }
@@ -47,8 +63,12 @@ public class MusicDAO {
             System.err.println("Error executing query: " + e.getMessage());
             throw new RuntimeException("Error checking password in the database", e);
         }
+
         return false;
     }
+
+
+
 
 
 

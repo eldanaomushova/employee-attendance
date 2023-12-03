@@ -4,8 +4,7 @@ public class LogInPage {
     private String email;
     private String password;
 
-    public LogInPage(String text, String text1) {
-    }
+
 
     public String getEmail() {
         return email;
@@ -19,8 +18,8 @@ public class LogInPage {
         return password;
     }
 
-    public String setPassword() {
+    public void setPassword(String password) {
         this.password = password;
-        return null;
+
     }
 }
