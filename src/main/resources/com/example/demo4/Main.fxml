@@ -15,7 +15,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.Main">
+<AnchorPane prefHeight="800.0" prefWidth="1300.0" style="-fx-background-color: black;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo4.HelloController">
    <children>
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1c2e40" height="100.0" stroke="BLACK" strokeType="INSIDE" width="1300.0" />
       <Button layoutX="34.0" layoutY="22.0" mnemonicParsing="false" prefHeight="63.0" prefWidth="256.0" style="-fx-font-size: 34; -fx-font-family: monospace; -fx-background-color: none; -fx-font-weight: 700;" text="Melodyfy" textFill="WHITE">
